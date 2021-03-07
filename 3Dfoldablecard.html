@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>3D foldable Card | Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Robot', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #04066ecb;
+        }
+
+        #card {
+            position: relative;
+            width: 50vh;
+            height: 80vh;
+            background: #f6f8fa;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+            /* border-radius: 4px; */
+            transition: 1s;
+        }
+        #card:hover{
+            transform: translateX(50%);
+        }
+        #img-card {
+            position: relative;
+            width: 100%;
+            height:100%;
+            z-index: 1;
+            transform-origin: left;
+            transform-style: preserve-3d;
+            background: black;
+            transition: 1s;
+            box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.25);
+        }
+        #img-card img{
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        #img-card img:nth-child(2){
+            transform: rotateY(180deg);
+        }
+        #card:hover .img{
+            transform: rotateY(-180deg);
+        }
+
+        #detail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contents {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #txt {
+            text-align: center;
+            font-size: 7vh;
+            font-weight: 700;
+            line-height: 1em;
+        }
+
+        #txt1 {
+            color: #e21212;
+            font-size: 0.8em;
+        }
+        #icons{
+            position: relative;
+            display: flex;
+            margin-top: 10px;
+        }
+        #a{
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 18px;
+            transition: 0.2px;
+            border-radius: 4px;
+        }
+        #a:hover{
+            background: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='card' class='card'>
+        <div id='img-card' class='img'>
+            <img src='./cssdependencies/fsteve.jpg'>
+            <img src='./cssdependencies/bsteve.jpg'>
+        </div>
+        <div id='detail' class='detail'>
+            <div id='contents' class='contents'>
+                <h2 id='txt'>
+                    Steve Jobs<br>
+                    <div id='txt1'>
+                        Founder of Apple
+                    </div>
+                </h2>
+                <div id='icons' class='icons'>
+                    <a id='a' href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                    <a id='a' href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a id='a' href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                    <a id='a' href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a id='a' href='#'><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                    <a id='a' href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
