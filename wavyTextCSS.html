@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #id {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f6f8fa;
+        }
+
+        #txt {
+            position: relative;
+            font-size: 2cm;
+            color: black;
+            letter-spacing: 2px;
+        }
+
+        /* #txt span{
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 -70px 0 black,
+                         0 70px 0 black;
+            animation: animate 2s ease-in-out infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                transform: translateY(10vh);
+            }
+            50%{
+                transform: translateY(-10vh);
+            }
+            100%{
+                transform: translateY(10vh);
+            }
+        } */
+        #txt span {
+            position: relative;
+            display: inline-block;
+            animation: animate 2s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(10vh);
+            }
+
+            25% {
+                transform: translateY(-10vh);
+            }
+
+            55% {
+                transform: translateY(10vh);
+            }
+
+            100% {
+                transform: translateY(10vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id='id'>
+        <h1 id='txt' class='text'>Hi this is Wavy Animation effect</h1>
+    </div>
+
+    <script>
+        //Script will divide the text into the single span
+        let txt = document.querySelector('.text')
+        txt.innerHTML = txt.textContent.replace(/\S/g, '<span>$&</span>')
+
+        let _spanarray = document.querySelectorAll('span')
+        for (let i = 0; i < _spanarray.length; i++) {
+            _spanarray[i].style.animationDelay = i * 0.05 + 's'
+            //_spanarray[i].style.animationDelay = i*0.08 +'s'
+        }
+    </script>
+</body>
+
+</html>

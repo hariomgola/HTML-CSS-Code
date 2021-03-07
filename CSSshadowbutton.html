@@ -2,16 +2,16 @@
 <html>
 
 <head>
-    <title>Css Shadow Button</title>
+    <title>Css Shadow Button | Button</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&disply=swap');
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
+
         #_body {
             display: flex;
             justify-content: center;
@@ -21,7 +21,7 @@
             background: #f6f8fa;
         }
 
-        #_btn1{
+        #_btn1 {
             position: relative;
             width: 160px;
             height: 50px;
@@ -32,7 +32,7 @@
             justify-content: center;
             align-items: center;
             overflow-x: hidden;
-            overflow-y: hidden ;
+            overflow-y: hidden;
         }
 
         #_btn1::before {
@@ -46,6 +46,7 @@
             transition: 0.5s ease-in-out;
             transition-delay: 0.5s;
         }
+
         #_btn1::after {
             content: '';
             position: absolute;
@@ -59,7 +60,7 @@
 
         }
 
-        #_btn2{
+        #_btn2 {
             position: relative;
             width: 160px;
             height: 50px;
@@ -70,8 +71,9 @@
             justify-content: center;
             align-items: center;
             overflow-x: hidden;
-            overflow-y: hidden ;
+            overflow-y: hidden;
         }
+
         #_btn2::after {
             content: '';
             position: absolute;
@@ -96,19 +98,22 @@
             transition-delay: 0.5s;
         }
 
-        #_btn1:hover::after{
+        #_btn1:hover::after {
             width: 50%;
             transition-delay: 0.5s;
         }
-        #_btn1:hover::before{
+
+        #_btn1:hover::before {
             width: 50%;
             transition-delay: 0.5s;
         }
-        #_btn2:hover::after{
+
+        #_btn2:hover::after {
             width: 50%;
             transition-delay: 0.5s;
         }
-        #_btn2:hover::before{
+
+        #_btn2:hover::before {
             width: 50%;
             transition-delay: 0.5s;
         }
@@ -120,20 +125,24 @@
             font-size: 18px;
             transition: 0.5s;
         }
-        a span:nth-child(1){
+
+        a span:nth-child(1) {
             transition-delay: 0.7s;
         }
-        a:hover span:nth-child(1){
+
+        a:hover span:nth-child(1) {
             transform: scale(0);
             transition-delay: 0s;
         }
-        a span:nth-child(2){
+
+        a span:nth-child(2) {
             transform: scale(3);
             opacity: 0;
             color: black;
             transition-delay: 0s;
         }
-        a:hover span:nth-child(2){
+
+        a:hover span:nth-child(2) {
             transform: scale(1);
             transition-delay: 0s;
             opacity: 1;
@@ -150,7 +159,7 @@
         <span>Youtube</span>
     </a>
 
-    <a id='_btn2'href="https://www.google.com">
+    <a id='_btn2' href="https://www.google.com">
         <span>Google</span>
         <span>Google</span>
     </a>
