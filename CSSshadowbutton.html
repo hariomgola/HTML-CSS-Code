@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Css Shadow Button</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&disply=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        #_body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            background: #f6f8fa;
+        }
+
+        #_btn1{
+            position: relative;
+            width: 160px;
+            height: 50px;
+            margin: 15px 10px;
+            background: #222;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: hidden ;
+        }
+
+        #_btn1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #00fe73;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.5s;
+        }
+        #_btn1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: #00fe73;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.5s;
+
+        }
+
+        #_btn2{
+            position: relative;
+            width: 160px;
+            height: 50px;
+            margin: 15px 10px;
+            background: #222;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: hidden ;
+        }
+        #_btn2::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: #fe1a6f;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.5s;
+        }
+
+        #_btn2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #fe1a6f;
+            transition: 0.5s ease-in-out;
+            transition-delay: 0.5s;
+        }
+
+        #_btn1:hover::after{
+            width: 50%;
+            transition-delay: 0.5s;
+        }
+        #_btn1:hover::before{
+            width: 50%;
+            transition-delay: 0.5s;
+        }
+        #_btn2:hover::after{
+            width: 50%;
+            transition-delay: 0.5s;
+        }
+        #_btn2:hover::before{
+            width: 50%;
+            transition-delay: 0.5s;
+        }
+
+        a span {
+            position: absolute;
+            z-index: 1;
+            color: white;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+        a span:nth-child(1){
+            transition-delay: 0.7s;
+        }
+        a:hover span:nth-child(1){
+            transform: scale(0);
+            transition-delay: 0s;
+        }
+        a span:nth-child(2){
+            transform: scale(3);
+            opacity: 0;
+            color: black;
+            transition-delay: 0s;
+        }
+        a:hover span:nth-child(2){
+            transform: scale(1);
+            transition-delay: 0s;
+            opacity: 1;
+            z-index: 10;
+            transition-delay: 0.5s;
+        }
+    </style>
+</head>
+
+<body id="_body">
+
+    <a id='_btn1' href="https://www.youtube.com">
+        <span>Youtube</span>
+        <span>Youtube</span>
+    </a>
+
+    <a id='_btn2'href="https://www.google.com">
+        <span>Google</span>
+        <span>Google</span>
+    </a>
+    <i class="fab fa-youtube"></i>
+
+</body>
+
+</html>
