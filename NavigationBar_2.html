@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation Bar | CodeMe</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rancho', cursive;
+        }
+
+        #body {
+            display: flex;
+            min-height: 100vh;
+            background: #ffd207ec;
+        }
+
+        #main {
+            position: relative;
+        }
+
+        #nav {
+            position: relative;
+            width: 10vh;
+            height: 100vh;
+            background: white;
+            border-radius: 1vh;
+            overflow: hidden;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        #nav.On {
+            width: 30vh;
+        }
+
+        #ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #li {
+            position: relative;
+            list-style: none;
+            width: 100%;
+        }
+
+        #li:hover {
+            background: #404040;
+        }
+
+        #a {
+            position: relative;
+            display: block;
+            width: 100%;
+            display: flex;
+            text-decoration: none;
+            color: #080808;
+            font-size: 4vh;
+            font-weight: 500;
+        }
+
+        #icon {
+            position: relative;
+            display: block;
+            min-width: 10vh;
+            line-height: 10vh;
+            text-align: center;
+        }
+
+        #text {
+            position: relative;
+            text-align: center;
+            display: block;
+            height: 10vh;
+            line-height: 9vh;
+            white-space: nowrap;
+            padding: 0.4vh;
+        }
+
+        #fa {
+            font-size: 4vh;
+        }
+
+        #toggle {
+            position: absolute;
+            top: calc(50% - 20px);
+            right: -2.5vh;
+            width: 5vh;
+            height: 5vh;
+            background: white;
+            cursor: pointer;
+            border: 0.5vh solid #ffd207ec;
+            border-radius: 50%;
+        }
+
+        #toggle::before {
+            content: '\f054';
+            font-family: fontAwesome;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            line-height: 4vh;
+            text-align: center;
+            font-size: 2vh;
+            color: #080808;
+        }
+
+        #toggle.On::before {
+            content: '\f053';
+        }
+    </style>
+</head>
+
+<body id='body'>
+    <div id='main'>
+        <div id='nav' class='nav'>
+            <ul id='ul'>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-home" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Home</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-user" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Profile</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-comments" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Message</span>
+                    </a>
+                </li>
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-users" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Friends</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-bell" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Notification</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-cloud-upload"
+                                aria-hidden="true"></i></span>
+                        <span id='text' class="text">Upload Photo</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-video-camera"
+                                aria-hidden="true"></i></span>
+                        <span id='text' class="text">Video Call</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-info" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Help</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Setting</span>
+                    </a>
+                </li>
+
+                <li id='li'>
+                    <a id='a' href="#">
+                        <span id='icon' class="icon"><i id='fa' class="fa fa-sign-out" aria-hidden="true"></i></span>
+                        <span id='text' class="text">Logout</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div id='toggle' class="toggle"></div>
+    </div>
+
+    <script>
+        //Here we Write our JavaScript Code
+        const nav = document.querySelector('.nav')
+        document.querySelector('.toggle').onclick = function () {
+            this.classList.toggle('On')
+            nav.classList.toggle('On')
+        }
+    </script>
+</body>
+
+</html>
