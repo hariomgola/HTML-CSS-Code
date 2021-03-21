@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Cursor | CodeMe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        /*Here we write our CSS code*/
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            cursor: none;
+            background: #404040;
+        }
+
+        /* #cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: absolute;
+            transition-duration: 50ms;
+            transition-timing-function: ease-out;
+            animation: animate .5s infinite alternate;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(350deg);
+            }
+        } */
+        #cursor{
+            position: absolute;
+        }
+        #fa{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Here we Write our HTML code-->
+    <div id='cursor' class="cursor"><i id='fa' class="fa fa-cog fa-spin fa-3x fa-fw"></i></div>
+    <script>
+        //Here we write our JavaScript Code
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute('style', 'top:' + e.pageY + "px; left:" + e.pageX + "px;")
+        })
+    </script>
+</body>
+
+</html>

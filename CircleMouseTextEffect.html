@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Circle Text Animation | CodeMe </title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        /*Here we Write out Css Code*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        #sec {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #404040;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        #text {
+            position: absolute;
+            color: white;
+            font-size: 1.5em;
+            user-select: none;
+            pointer-events: none;
+            animation: animate 10s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #text span {
+            position: absolute;
+            text-transform: uppercase;
+            display: inline-block;
+            transform-origin: 0 100px;
+            top: -100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Here we Write our Html Code-->
+    <section id='sec'>
+        <h3 id='text' class="text">CodeMe - Youtube - HTML - CSS - </h3>
+    </section>
+    <script>
+        // Here we write out JavaScript code
+
+        //Converting H3 into small Spans
+        const text = document.querySelector('.text')
+        text.innerHTML = text.textContent.replace(/\S/g, '<span>$&</span>')
+
+        const element = document.querySelectorAll('span');
+        for (let i = 0; i < element.length; i++) {
+            element[i].style.transform = 'rotate(' + i * 15 + 'deg)'
+        }
+
+        //For Align with mouse
+        document.addEventListener('mousemove', function (event) {
+            //for x-axis
+            text.style.left = event.pageX + 'px'
+            //for y-axis
+            text.style.top = event.pageY + 'px'
+        })
+    </script>
+</body>
+
+</html>
