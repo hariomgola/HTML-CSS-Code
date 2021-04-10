@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> IOS Button | Hari</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+  <style>
+    /*Here we write our css code*/
+    body {
+      /* background: #f5f5f5; */
+      background: coral;
+    }
+
+    #txt {
+      text-align: center;
+      color: black;
+    }
+
+    #iosbutton {
+      margin: auto;
+      padding: 20px;
+      width: 55px;
+      border: 1px solid #d3d3d3;
+      margin-top: 20px;
+      border-radius: 5px;
+      background: white;
+    }
+
+    #toggleOn {
+      opacity: 0;
+      position: absolute;
+    }
+
+    #toggleOff {
+      opacity: 0;
+      position: absolute;
+    }
+
+    #label {
+      position: relative;
+      display: inline-block;
+      user-select: none;
+      transition: .4s ease;
+      -webkit-tap-highlight-color: transparent;
+      height: 30px;
+      width: 50px;
+      border: 1px solid #e4e4e4;
+      border-radius: 60px;
+    }
+
+    input.mobileToggle+label:before {
+      content: "";
+      position: absolute;
+      display: block;
+      transition: 0.2s cubic-bezier(0.24, 0, 0.5, 1);
+      height: 30px;
+      width: 51px;
+      top: 0;
+      left: 0;
+      border-radius: 30px;
+    }
+
+    input.mobileToggle+label:after {
+      content: "";
+      position: absolute;
+      display: block;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0px 0 rgba(0, 0, 0, 0.04), 0 4px 9px rgba(0, 0, 0, 0.13), 0 3px 3px rgba(0, 0, 0, 0.05);
+      transition: 0.35s cubic-bezier(0.54, 1.6, 0.5, 1);
+      background: #f5f5f5;
+      height: 28px;
+      width: 28px;
+      top: 1px;
+      left: 0px;
+      border-radius: 60px;
+    }
+
+    input.mobileToggle:checked+label:before {
+      background: #2ecc71;
+      -moz-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+      -o-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+      -webkit-transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+      transition: width 0.2s cubic-bezier(0, 0, 0, 0.1);
+    }
+
+    input.mobileToggle:checked+label:after {
+      left: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Here we write our Html code-->
+  <h1 id='txt'>IOS Button for WebApp</h1>
+  <div id='iosbutton' class="toggleWrapper">
+    <input id="toggleOn" type="checkbox" name="toggle1" class="mobileToggle" checked>
+    <label id='label' for="toggleOn"></label>
+  </div>
+
+  <div id='iosbutton' class="toggleWrapper">
+    <input id="toggleOff" type="checkbox" name="toggle" class="mobileToggle">
+    <label id='label' for="toggleOff"></label>
+  </div>
+  <script>
+            //Here we write out JavaScript code
+  </script>
+</body>
+
+</html>
