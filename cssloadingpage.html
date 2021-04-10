@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Loading Page| Hari</title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+        <style>
+            /*Here we write our css code*/
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            #section{
+                display:flex ;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background: #021b02;
+
+                animation: animebg 10s linear infinite;
+            }
+            @keyframes animebg{
+                0%{
+                    filter: hue-rotate(0deg);
+                }
+                100%{
+                    filter: hue-rotate(360deg);
+                }
+            }
+            #loading{
+                position: relative;
+                width: 250px;
+                height: 250px;
+            }
+            #block{
+                position: absolute;
+                width: 8px;
+                height: 26px;
+                background: black;
+                border-radius: 8px;
+                left: 50%;
+                transform: rotate(calc(15deg*var(--i)));/* 360/24 = 15*/
+                transform-origin: 0 125px; /* 250/2 = 125 */
+                animation: anime 2s ease-in-out infinite;
+                animation-delay: calc(0.04s*var(--i));/* 1/24 = 0.04*/
+            }
+            @keyframes anime{
+                0%,49%{
+                    background-color:black;
+                    box-shadow: none;
+                }
+                50%,100%{
+                    background:#3cff00;
+                    box-shadow:0 0 5px #3cff00,
+                               0 0 15px #3cff00,
+                               0 0 30px #3cff00,
+                               0 0 60px #3cff00,
+                               0 0 90px #3cff00;
+                }
+            }
+            #h{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%); /*Comes in centre according to width height*/
+                font-size: 2em;
+                letter-spacing: 2px;
+                animation: animeh 2s ease-in-out infinite;
+                animation-delay: -1s;
+            }
+            @keyframes animeh{
+                0%,49%{
+                    color: black;
+                    text-shadow: none;
+                }
+                50%,100%{
+                    color:#3cff00;
+                    text-shadow:0 0 5px #3cff00,
+                               0 0 15px #3cff00;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--Here we write our Html code-->
+        <section id='section'>
+            <div id='loading' class="loading">
+                <div id='block' class="block" style="--i:1;"></div>
+                <div id='block' class="block" style="--i:2;"></div>
+                <div id='block' class="block" style="--i:3;"></div>
+                <div id='block' class="block" style="--i:4;"></div>
+                <div id='block' class="block" style="--i:5;"></div>
+                <div id='block' class="block" style="--i:6;"></div>
+                <div id='block' class="block" style="--i:7;"></div>
+                <div id='block' class="block" style="--i:8;"></div>
+                <div id='block' class="block" style="--i:9;"></div>
+                <div id='block' class="block" style="--i:10;"></div>
+                <div id='block' class="block" style="--i:11;"></div>
+                <div id='block' class="block" style="--i:12;"></div>
+                <div id='block' class="block" style="--i:13;"></div>
+                <div id='block' class="block" style="--i:14;"></div>
+                <div id='block' class="block" style="--i:15;"></div>
+                <div id='block' class="block" style="--i:16;"></div>
+                <div id='block' class="block" style="--i:17;"></div>
+                <div id='block' class="block" style="--i:18;"></div>
+                <div id='block' class="block" style="--i:19;"></div>
+                <div id='block' class="block" style="--i:20;"></div>
+                <div id='block' class="block" style="--i:21;"></div>
+                <div id='block' class="block" style="--i:22;"></div>
+                <div id='block' class="block" style="--i:23;"></div>
+                <div id='block' class="block" style="--i:24;"></div>
+
+                <h3 id='h'>Loading...</h3>
+            </div>
+        </section>
+        <script>
+            //Here we write out JavaScript code
+        </script>
+    </body>
+</html>
