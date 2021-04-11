@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Responsive Footer | Hari</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://hariomgola.github.io/dependencies/logo.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        /*Here we write our css code*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            justify-content: end;
+            align-content: end;
+            min-height: 100vh;
+        }
+
+        #footer {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 50px 50px;
+            background: cornflowerblue;
+        }
+
+        #wrapper {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        #heading {
+            position: relative;
+            color: white;
+            font-weight: 520;
+            margin-bottom: 15px;
+        }
+
+        #heading::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            overflow: hidden;
+            left: 0;
+            width: 92px;
+            height: 2px;
+            background: #ffd900d5;
+        }
+
+        #p {
+            text-align: justify;
+            color: whitesmoke;
+            font-weight: 400;
+        }
+
+        /*Code for About Us*/
+        #AboutUl {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-gap: 30px;
+        }
+
+        #AboutUl li {
+            list-style: none;
+        }
+
+        #AboutUl li a {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            /* background: #3e56cb; */
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #AboutUl li a:hover {
+            background: #6380fe;
+        }
+
+        #AboutUl li a .fa {
+            color: whitesmoke;
+            font-size: 30px;
+        }
+
+        #AboutUl li a .fa:hover {
+            color: black;
+        }
+
+
+        /*Code for links and Works*/
+        #links {
+            position: relative;
+        }
+        #links h2::before{
+            width: 120px;
+        }
+        #Work h2::before{
+            width: 105px;
+        }
+
+        #linksUl li {
+            list-style: none;
+        }
+
+        #linksUl li a {
+            color: whitesmoke;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        #linksUl li a:hover {
+            color: #f8e432;
+        }
+
+        /*Code for info*/
+        #contact h2::before{
+            width: 110px;
+        }
+        #infoUl {
+            position: relative;
+        }
+
+        #infoUl li {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            margin-bottom: 16px;
+        }
+
+        #infoUl li span {
+            color: whitesmoke;
+            font-size: 20px;
+        }
+
+        #infoUl li p {
+            color: whitesmoke;
+        }
+
+        #infoUl a {
+            color: whitesmoke;
+        }
+
+        #infoUl a:hover {
+            color: #f8e432;
+        }
+
+        /*CopyRight Code*/
+        #copyright {
+            cursor: not-allowed;
+            width: 100%;
+            background-color: #202020;
+            padding: 8px 10px;
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        #copyrightline {
+            color: rgb(236, 100, 75);
+            animation: copyrightanimate 20s infinite;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @keyframes copyrightanimate {
+
+            from,
+            to {
+                color: rgb(236, 100, 75);
+            }
+
+            10% {
+                color: rgb(219, 10, 91);
+            }
+
+            20% {
+                color: rgb(174, 168, 211);
+            }
+
+            30% {
+                color: rgb(89, 171, 227);
+            }
+
+            40% {
+                color: rgb(37, 116, 169);
+            }
+
+            50% {
+                color: rgb(3, 201, 169);
+            }
+
+            60% {
+                color: rgb(22, 160, 133);
+            }
+
+            70% {
+                color: rgb(233, 212, 96);
+            }
+
+            80% {
+                color: rgb(243, 156, 18);
+            }
+
+            90% {
+                color: rgb(236, 240, 241);
+            }
+        }
+
+        /*For Tablet View*/
+        @media(max-width:950px) {
+            #footer {
+                padding: 40px;
+            }
+
+            #wrapper {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:700px) {
+            #wrapper {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--Here we write our Html code-->
+    <footer id='footer' class="footer">
+        <div id='wrapper' class="wrapper">
+            <div class="About">
+                <h2 id='heading'>About Us</h2>
+                <p id='p'>
+                    17+ years demonstrated experience in designing, architecting and supporting enterprise-level
+                    internet scale services/solutions hosted on Cloud and On-premise technologies. Experience working
+                    closely with Software Engineering, especially in the aspects of system performance, capacity
+                    management and scalability to ensure sustained service stability, SLA's and Business KPI's.
+                </p>
+
+                <ul id='AboutUl' class="sci">
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div id='links' class="links">
+                <h2 id='heading'>Quick Links</h2>
+                <ul id='linksUl'>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+
+            <div id='Work' class="Work">
+                <h2 id='heading'>Our Works</h2>
+                <ul id='linksUl'>
+                    <li><a href="#">Ecommerce Application</a></li>
+                    <li><a href="#">Backend Integration</a></li>
+                    <li><a href="#">End to End Web Solution</a></li>
+                    <li><a href="#">Project Hanlding</a></li>
+                    <li><a href="#">Front End development</a></li>
+                    <li><a href="#">SEO Optimisation</a></li>
+                </ul>
+            </div>
+
+            <div id='contact' class="contact">
+                <h2 id='heading'>Contact Us</h2>
+                <ul id='infoUl' class="info">
+                    <li>
+                        <span><i class="fa fa-map-pin" aria-hidden="true"></i></span>
+                        <p>
+                            New Delhi,Delhi<br>
+                            India, DL 12
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-mobile" aria-hidden="true"></i></span>
+                        <p id='p'>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
+                            <br>
+                            <a href="tel:+919012345678">+91 90123 45678</a>
+                        </p>
+                    </li>
+                    <li>
+                        <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <p id='p'>
+                            <a href="mail:youremail@email.com">youremail@email.com</a>
+                            <br>
+                            <a href="mail:sampleemail@gmail.com">sampleemail@gmail.com</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div id="copyright">
+        <p id='copyrightline'>Copyright @ 2021 Hariom Kumar. All Rights Reserved. Not to Use for Making Profit</p>
+    </div>
+    <script>
+            //Here we write out JavaScript code
+    </script>
+</body>
+
+</html>
